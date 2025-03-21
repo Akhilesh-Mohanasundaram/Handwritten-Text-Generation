@@ -1,0 +1,44 @@
+Spam SMS Detection System: A Machine Learning-Based Approach (Documentation)
+
+1. Pre-processing Approaches
+
+The preprocess_text function performs several text preprocessing steps:
+
+a. Lowercasing:
+   - Converts all text to lowercase to ensure uniformity and reduce dimensionality.
+
+b. Tokenization:
+   - Uses NLTK's word_tokenize function to split the text into individual words or tokens.
+
+c. Alphanumeric Filtering:
+   - Removes non-alphanumeric tokens to clean the text of punctuation and special characters.
+
+d. Stopword Removal:
+   - Eliminates common English stopwords (e.g., "the", "is", "at") using NLTK's stopwords list.
+   - This helps focus on more meaningful words and reduces noise in the data.
+
+e. Stemming:
+   - Applies the Porter Stemming algorithm to reduce words to their root form.
+   - This helps in normalizing words and reducing vocabulary size (e.g., "running" becomes "run").
+
+2. Classification Method
+
+The SklearnNLTKClassifier is a custom wrapper class that adapts scikit-learn classifiers for use with NLTK:
+
+a. Initialization:
+   - Takes a scikit-learn classifier as input, allowing flexibility in the choice of algorithm.
+
+b. Classification:
+   - The classify method predicts the class for a single set of features.
+   - classify_many handles multiple feature sets at once.
+
+c. Feature Conversion:
+   - The _dict_to_vector method converts NLTK-style feature dictionaries to numpy arrays for scikit-learn compatibility.
+
+d. Label Handling:
+   - The labels method retrieves class labels from the underlying scikit-learn classifier.
+
+e. Probability Estimation:
+   - Not implemented in this version, raising a NotImplementedError if called.
+
+This approach allows for the use of powerful scikit-learn classifiers within NLTK workflows, combining the strengths of both libraries for SMS spam detection.
