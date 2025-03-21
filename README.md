@@ -88,7 +88,19 @@ This will:
 - Display whether each message is classified as spam or legitimate
 - Continue until you type 'exit' to quit the application
 
-### 8. Deactivate the Virtual Environment
+## 8. Run the Web Application
+
+After testing the model with the command-line interface, you can use the web application for a more user-friendly experience.
+
+### **Usage:**
+Run the following commands from the project root:
+
+```bash
+python app.py
+```
+Open a browser interface at http://127.0.0.1:5000
+
+### 9. Deactivate the Virtual Environment
 
 When finished, deactivate the virtual environment:
 

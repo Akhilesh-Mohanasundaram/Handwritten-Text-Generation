@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpamSense - SMS Spam Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SpamSense</h1>
+            <p class="subtitle">Intelligent SMS Spam Detection System</p>
+        </header>
+        
+        <main>
+            <div class="card">
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="message">Enter SMS message:</label>
+                        <textarea name="message" id="message" rows="4" placeholder="Type or paste your SMS message here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-classify">Classify Message</button>
+                </form>
+            </div>
+            
+            {% if result %}
+            <div class="result-card {% if result == 'spam' %}spam{% else %}ham{% endif %}">
+                <h2>Classification Result:</h2>
+                <div class="result-badge">
+                    {% if result == 'spam' %}
+                    <span class="badge spam">SPAM</span>
+                    <p>This message appears to be spam.</p>
+                    {% else %}
+                    <span class="badge ham">HAM</span>
+                    <p>This message appears to be legitimate.</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 SpamSense - Powered by Machine Learning</p>
+        </footer>
+    </div>
+</body>
+</html>

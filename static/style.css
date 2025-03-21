@@ -1,0 +1,157 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+/* Card Styles */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    resize: vertical;
+    transition: border-color 0.3s;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.btn-classify {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-classify:hover {
+    background-color: #2980b9;
+}
+
+/* Result Styles */
+.result-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+}
+
+.result-card.spam {
+    border-left: 5px solid #e74c3c;
+}
+
+.result-card.ham {
+    border-left: 5px solid #2ecc71;
+}
+
+.result-card h2 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.result-badge {
+    margin-top: 1rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    font-weight: 700;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.badge.spam {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.badge.ham {
+    background-color: #2ecc71;
+    color: white;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .card, .result-card {
+        padding: 1.5rem;
+    }
+}
