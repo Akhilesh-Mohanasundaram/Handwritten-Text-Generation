@@ -71,7 +71,24 @@ This will:
 - Test the model on example SMS messages
 - Display the classification results
 
-### 7. Deactivate the Virtual Environment
+## 7. Run the Application
+
+After testing the model, you can use the interactive application to classify your own SMS messages.
+
+### **Usage:**
+Run the following command from the project root:
+
+```bash
+python application.py
+```
+This will:
+- Load the saved model and vectorizer
+- Start an interactive command-line interface
+- Allow you to enter SMS messages for real-time classification
+- Display whether each message is classified as spam or legitimate
+- Continue until you type 'exit' to quit the application
+
+### 8. Deactivate the Virtual Environment
 
 When finished, deactivate the virtual environment:
 
