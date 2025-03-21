@@ -103,9 +103,6 @@ The files contain one message per line. Each line is composed by two columns: v1
 
 https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset?resource=download
 
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/58131223/bd6f2881-8f9a-40c3-b1f6-b3c4f0fb7d64/spam.csv
-
 
 
 ---
