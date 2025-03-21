@@ -34,7 +34,7 @@ def main():
 
     nltk_classifier = SklearnNLTKClassifier(sklearn_classifier)
 
-    print("Evaluating model...")
+    print("Evaluating model...\n")
     y_pred = sklearn_classifier.predict(X_test_tfidf)
 
     accuracy = accuracy_score(y_test, y_pred)
@@ -42,11 +42,13 @@ def main():
     recall = recall_score(y_test, y_pred, pos_label='spam')
     f1 = f1_score(y_test, y_pred, pos_label='spam')
 
-    print("\nModel Evaluation Results:")
+    print("-" * 60)
+    print("Model Performance(Evaluation) Results:\n")
     print(f"Accuracy: {accuracy:.4f}")
     print(f"Precision: {precision:.4f}")
     print(f"Recall: {recall:.4f}")
     print(f"F1-Score: {f1:.4f}")
+    print("-" * 60)
 
     # Save the model and vectorizer to the models folder
     models_dir = '../models'
